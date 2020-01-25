@@ -1,0 +1,129 @@
+/*
+ Theme Name:   Esoterina Blog
+ Theme URI:    https://esoterina.com
+ Description:  Description de mon thème enfant
+ Author:       JYH
+ Author URI:   https://esoterina.com
+ Template:     twentytwenty
+ Version:      1.0.0
+*/
+:root{
+  --navPaddingMobileH640: 2.5rem;
+  --navPaddingMobileH731: 5rem;
+  --navPaddingMobileH823: 6rem;
+  --navPaddingMobileHiPhone678: 4rem;
+  --navPaddingMobileHiPhoneX: 4rem;
+  --navPaddingMobileHiPad: 12rem;
+}
+
+@font-face {
+    font-family: 'Papyrus';
+    src: url('./../font/papyrus.ttf');
+  }
+
+  /* HEADER */
+  @media screen and (max-height: 640px)  {
+    button.toggle {
+      margin-top: var(--navPaddingMobileH640, '3rem');
+    }
+  }
+  @media screen and (min-width: 411px) and (max-height: 731px)  {
+    button.toggle {
+      margin-top: var(--navPaddingMobileH731, '5rem');
+    }
+  }  
+  @media screen and (min-width: 411px) and (max-height: 823px)  {
+    button.toggle {
+      margin-top: var(--navPaddingMobileH823, '6rem');
+    }
+  }
+  /* iPhone 6/7/8 */
+  @media screen and (min-width: 375px) and (max-height: 667px)  {
+    button.toggle {
+      margin-top: var(--navPaddingMobileHiPhone678, '4rem');
+    }
+  }
+  /* iPhone X */
+  @media screen and (min-width: 375px) and (max-height: 812px)  {
+    button.toggle {
+      margin-top: var(--navPaddingMobileHiPhone678, '4rem');
+    }
+  }
+  /* iPad */
+  @media screen and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait)  {
+    button.toggle {
+      margin-top: var(--navPaddingMobileHiPad, '12rem');
+    }
+  }
+
+  @media screen and (min-width: 1024px) and (max-height: 1366px) {
+    .header-titles-wrapper {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      color: #fff;
+    }
+    .site-description {
+      color: #fff!important;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1220px) {
+    .primary-menu-wrapper + .header-toggles {
+      position: absolute;
+      right: 64px;
+    }
+  }
+
+
+
+.site-header {  
+  box-shadow: rgba(0,0,0,0.3) 0 2px 20px 10px
+}
+
+.entry-title.heading-size-1, .site-title a, .wp-block-quote p {
+  font-family: 'Papyrus';
+}
+
+.site-title a {
+    font-size: 38px;
+}
+
+.pll-parent-menu-item.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-has-children a {
+    padding-top: 6px;
+}
+
+.wp-block-image figure img, .featured-media-inner img {
+    border: #fff 5px solid;
+    box-shadow: rgba(0,0,0,0.3) 1px 3px 7px 3px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wp-block-image figure img:hover, .featured-media-inner img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+/* ************* POST **************** */
+
+/* Title */
+h1.entry-title,
+h2.entry-title {
+	margin: 0;
+	color: rgba(3,3,3,0.6);
+	font-weight: 200;
+}
+
+/* share container */
+.shared-counts-wrap
+ {
+    display: flex;
+    justify-content: center;
+}
+
+/* POST NAVIGATION PREV-NEXT*/
+.pagination-single a {
+    font-size: 0.75em;
+}

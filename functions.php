@@ -114,6 +114,21 @@
             }
         }
     }
+
+    public static function getCustomFields($id) {
+        $html = "<div class='meta-data-div'><h3>Commandez le livre sur :</h3><ul class='meta-data-list'>";
+        if ( strlen(get_post_meta($id,'amazon', true)) > 0) {
+            $html .= "<li class='post-meta-data'><i class='fas fa-shopping-cart'></i>&nbsp;<a href='" . get_post_meta(get_the_ID(),'amazon', true) . "'>Amazon</a></li>";
+        }
+        if ( strlen(get_post_meta($id,'editions_st_honore_paris', true)) > 0) {
+            $html .= "<li class='post-meta-data'><i class='fas fa-shopping-cart'></i>&nbsp;<a href='" . get_post_meta(get_the_ID(),'amazon', true) . "'>Editions St Honoré</a></li>";            
+        } else {
+            return;
+        }
+
+        $html .= "</ul></div>";
+        return $html;
+    }
 }
 
 // if ( ! isset( $content_width ) )  $content_width = 800; /* pixels */
